@@ -2,6 +2,7 @@
 CrudeCRM is a PHP-based CRM system designed to manage business operations such as clients, leads, inventory, invoices, and users in one place.
 
 Features -
+
 **Client Management**
 Add, update, and organize client information with ease.
 
