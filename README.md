@@ -20,3 +20,4 @@ Secure login/logout system with user profile management.
 
 **Activity Logs & Reporting**
 Track system activities and generate reports such as inventory summaries.
+<img width="1893" height="946" alt="CrudeCRM" src="https://github.com/user-attachments/assets/699ec05b-15a3-4e11-a47c-c0aa503ca803" />
