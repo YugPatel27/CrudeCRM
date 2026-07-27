@@ -1,4 +1,3 @@
-<?php include 'header.php'; ?>
 <?php
 include_once 'connect.php'; // Ensure db.php is included to establish the database connection
 include_once 'sidebar.php';
@@ -61,6 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_product'])) {
   </style>
 </head>
 <body>
+<?php $skipHeaderWrapper = true; include 'header.php'; ?>
   <div class="container">
     <form method="POST">
       <div class="card shadow">

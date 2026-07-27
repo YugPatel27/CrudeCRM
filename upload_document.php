@@ -1,4 +1,5 @@
-<?php include 'header.php'; include_once 'sidebar.php';?>
+<?php
+include_once 'sidebar.php';
 
 <?php
 $conn = new mysqli("localhost", "root", "", "crmcrude");
@@ -120,6 +121,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </style>
 </head>
 <body>
+<?php $skipHeaderWrapper = true; include 'header.php'; ?>
 
 <div class="container-wrapper">
   <div class="form-card">

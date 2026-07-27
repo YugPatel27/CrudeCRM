@@ -1,5 +1,4 @@
 <?php
-include 'header.php';
 include_once 'connect.php';
 include_once 'sidebar.php';
 $conn = connectdb();
@@ -21,6 +20,7 @@ $conn = connectdb();
   </style>
 </head>
 <body>
+<?php $skipHeaderWrapper = true; include 'header.php'; ?>
 <div class="container mt-5">
   <div class="card shadow">
     <div class="card-header d-flex justify-content-between align-items-center">

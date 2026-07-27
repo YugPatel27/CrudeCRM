@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+
 <?php
 include_once 'connect.php';
 include_once 'sidebar.php';
@@ -80,6 +80,7 @@ log_activity($conn, $_SESSION['user_id'], 'leads', 'Created new lead: ' . $clien
   </style>
 </head>
 <body>
+<?php $skipHeaderWrapper = true; include 'header.php'; ?>
 
 <div class="container">
   <form method="POST">

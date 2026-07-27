@@ -1,5 +1,5 @@
-<?php include 'header.php'; include_once 'sidebar.php';?>
 <?php
+include_once 'sidebar.php';
 $conn = new mysqli("localhost", "root", "", "crmcrude");
 if ($conn->connect_error) die("Connection failed: " . $conn->connect_error);
 
@@ -93,6 +93,7 @@ $leads = $conn->query("SELECT * FROM leads ORDER BY created_at DESC");
   </style>
 </head>
 <body>
+<?php $skipHeaderWrapper = true; include 'header.php'; ?>
 
 <div class="main-container">
   <div class="section-title">

@@ -14,7 +14,11 @@ $stmt->bind_param("i", $user_id);
 $stmt->execute();
 $result = $stmt->get_result();
 $user = $result->fetch_assoc();
+
+$showHeaderWrapper = !isset($skipHeaderWrapper) || !$skipHeaderWrapper;
+$showHeaderAssets = !isset($skipHeaderAssets) || !$skipHeaderAssets;
 ?>
+<?php if ($showHeaderWrapper): ?>
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <head>
@@ -22,6 +26,8 @@ $user = $result->fetch_assoc();
   <title>CRM Dashboard</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php endif; ?>
+<?php if ($showHeaderAssets): ?>
   <link rel="shortcut icon" href="theme-assets/images/ico/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700|Comfortaa:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
@@ -31,7 +37,7 @@ $user = $result->fetch_assoc();
   <link rel="stylesheet" href="theme-assets/css/core/menu/menu-types/vertical-menu.css">
   <link rel="stylesheet" href="theme-assets/css/core/colors/palette-gradient.css">
   <link rel="stylesheet" href="theme-assets/css/pages/dashboard-ecommerce.css">
-
+<?php endif; ?>
   <style>
     @media (max-width: 768px) {
       .main-menu {
@@ -105,8 +111,10 @@ $user = $result->fetch_assoc();
       color: #d9534f;
     }
   </style>
+<?php if ($showHeaderWrapper): ?>
 </head>
 <body class="vertical-layout vertical-menu 2-columns menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu" data-color="bg-light" data-col="2-columns">
+<?php endif; ?>
 
 <!-- Top Navbar -->
 <nav class="header-navbar navbar-expand-md navbar navbar-with-menu fixed-top navbar-semi-light">
@@ -205,6 +213,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['profile_update'])) {
     overlay.classList.toggle("show");
   }
 </script>
-</body>
-</html>
 <?php ob_end_flush(); ?>

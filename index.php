@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
 <?php include_once 'header.php'; ?>
 
-<body class="vertical-layout">
   <!-- Page Wrapper -->
   <div class="layout-wrapper">
 

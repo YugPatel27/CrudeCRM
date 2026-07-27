@@ -1,4 +1,3 @@
-<?php include 'header.php'; ?>
 <?php
 include_once 'connect.php';
 include_once 'sidebar.php';
@@ -13,6 +12,7 @@ $query = "
 ";
 $result = $conn->query($query);
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -58,6 +58,7 @@ $result = $conn->query($query);
   </style>
 </head>
 <body>
+<?php $skipHeaderWrapper = true; include 'header.php'; ?>
 
 <!-- Content Wrapper -->
 <div class="content-wrapper">

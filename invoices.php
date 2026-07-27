@@ -1,4 +1,3 @@
-<?php include 'header.php'; ?>
 <?php
 include_once 'connect.php';
 include_once 'sidebar.php';
@@ -85,7 +84,7 @@ if (isset($_GET['delete'])) {
   </style>
 </head>
 <body>
-
+<?php $skipHeaderWrapper = true; include 'header.php'; ?>
 <div class="container">
   <?php if (isset($_GET['msg'])): ?>
     <div class="alert alert-success text-center">

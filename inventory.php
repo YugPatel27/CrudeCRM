@@ -1,4 +1,3 @@
-<?php include 'header.php'; ?>
 <?php
 include_once 'connect.php';
 include_once 'sidebar.php';
@@ -47,6 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['action'] === 'delete') {
   </style>
 </head>
 <body>
+<?php $skipHeaderWrapper = true; include 'header.php'; ?>
 <br>
 <div class="container mt-4">
   <div class="card shadow">
